@@ -6,8 +6,9 @@
         {
             Console.WriteLine("Welcome To ADO.net");
             // CustomerOperation.CreateDatabase();
-               CustomerOperation.CreateTable();
-            //CustomerOperation.InsertIntoTable();
+            // CustomerOperation.CreateTable();
+            CustomerOperation.Insert();
+           
         }
     }
 }

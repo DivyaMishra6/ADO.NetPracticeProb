@@ -66,47 +66,12 @@ namespace ADOCustomerProblem
                 con.Close();
             }
         }
-
-        public static void insert()
-        {
-            try
-            {
-                //writing sql query
-                string query = " insert into CudtomerData values ('Divya','Lucknow'),('Priya','Up')";
-                SqlCommand cm = new SqlCommand(query, con);
-
-                //opening connection
-                con.Open();
-
-                //Executing sql query
-                cm.ExecuteNonQuery();
-
-                //Displaying message
-                Console.WriteLine("Data inserted successfully");
-                Console.WriteLine("------------------------------");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
-
-        public static void Update()
+        public static void Insert()
         {
 
         }
-        public static void Delete()
-        {
 
-        }
-        public static void Display()
-        {
 
-        }
 
     }
 }

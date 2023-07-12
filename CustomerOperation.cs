@@ -116,6 +116,27 @@ namespace ADOCustomerProblem
                 con.Close();
             }
         }
+
+        public static void UpdateTable()
+        {
+            try
+            {
+                string query = "UPDATE  CudtomerData SET City = 'Chandigarh' WHERE Id = 4";
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Data Updated into the table.");
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine("Somethiing went Wrong." + e);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 
 

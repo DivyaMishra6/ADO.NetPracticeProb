@@ -92,6 +92,29 @@ namespace ADOCustomerProblem
             {
                 con.Close();
             }
+
+             
+        }
+
+        public static void DeleteRecord()
+        {
+            try
+            {
+                string query = "DELETE FROM CudtomerData WHERE Id = 2";
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Data deleted from the table.");
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine("Somethiing went Wrong." + e);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 

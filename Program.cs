@@ -7,7 +7,8 @@
             Console.WriteLine("Welcome To ADO.net");
             // CustomerOperation.CreateDatabase();
             // CustomerOperation.CreateTable();
-            CustomerOperation.Insert();
+            // CustomerOperation.Insert();
+            CustomerOperation.DeleteRecord();
            
         }
     }

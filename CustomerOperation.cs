@@ -68,11 +68,35 @@ namespace ADOCustomerProblem
         }
         public static void Insert()
         {
+            try
+            {
+                //writing sql query
+                string query = " insert into CudtomerData values ('Divya','Lucknow'),('Priya','Up'),('Pallavi','Mumbai'),('Pooja','MP') ";
+                SqlCommand cm = new SqlCommand(query, con);
 
+                //opening connection
+                con.Open();
+
+                //Executing sql query
+                cm.ExecuteNonQuery();
+
+                //Displaying message
+                Console.WriteLine("Data inserted successfully");
+                Console.WriteLine("------------------------------");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
-
-
-
     }
+
+
+
+    
 }
 

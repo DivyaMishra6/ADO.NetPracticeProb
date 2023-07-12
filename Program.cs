@@ -9,8 +9,10 @@
             // CustomerOperation.CreateTable();
             // CustomerOperation.Insert();
             //CustomerOperation.DeleteRecord();
-            CustomerOperation.UpdateTable();
-           
+            //CustomerOperation.UpdateTable();
+             CustomerOperation.DisplayDetails();
+
+
         }
     }
 }

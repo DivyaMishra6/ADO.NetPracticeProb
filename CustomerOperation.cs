@@ -137,6 +137,45 @@ namespace ADOCustomerProblem
                 con.Close();
             }
         }
+
+        public static bool DisplayDetails()
+        {
+            try
+            {
+                using (con)
+                {
+                    Customer model = new Customer();
+                    string query = "SELECT * FROM CudtomerData";
+                    SqlCommand command = new SqlCommand(query, con);
+                    con.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        Console.WriteLine("-----------Data-------------");
+                        while (reader.Read())
+                        {
+                            model.Id = Convert.ToInt32(reader["Id"]);
+                            model.Name = Convert.ToString(reader["Name"]);
+                            model.City = Convert.ToString(reader["City"]);
+                           
+                            Console.WriteLine("Customer_Id: {0}\nName: {1}\nCountry: {2} \n",
+                                               model.Id, model.Name, model.City);
+                        }
+                    }
+                    return true;
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went Wrong" + e);
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
 
 

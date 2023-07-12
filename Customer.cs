@@ -8,8 +8,8 @@ namespace ADOCustomerProblem
 {
     public class Customer
     {
-        public int Customer_Id { get; set; }
-        public string Customer_Name { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string City { get; set; }
         
     }
